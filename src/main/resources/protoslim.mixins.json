@@ -4,6 +4,7 @@
   "package": "io.github.prototechmc.protoslim.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "PlayerManagerMixin",
     "ServerPlayerEntityMixin",
     "ShulkerEntityMixin",
     "WorldBorderStaticAreaMixin"
