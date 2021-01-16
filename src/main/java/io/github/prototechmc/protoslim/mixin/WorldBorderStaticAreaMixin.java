@@ -21,22 +21,22 @@ public abstract class WorldBorderStaticAreaMixin {
     @Shadow
     private double boundSouth;
 
-    @Redirect(method = "recalculateBounds", at = @At(value = "FIELD", target = "Lnet/minecraft/world/border/WorldBorder$StaticArea;boundEast:D"))
+    @Redirect(method = "Lnet/minecraft/world/border/WorldBorder$StaticArea;recalculateBounds()V", at = @At(value = "FIELD", target = "Lnet/minecraft/world/border/WorldBorder$StaticArea;boundEast:D"))
     private void setBoundEast(@Coerce Object self, double original) {
         this.boundEast = ProtoSlim.BORDER_LENGTH / 2;
     }
 
-    @Redirect(method = "recalculateBounds", at = @At(value = "FIELD", target = "Lnet/minecraft/world/border/WorldBorder$StaticArea;boundNorth:D"))
+    @Redirect(method = "Lnet/minecraft/world/border/WorldBorder$StaticArea;recalculateBounds()V", at = @At(value = "FIELD", target = "Lnet/minecraft/world/border/WorldBorder$StaticArea;boundNorth:D"))
     private void setBoundNorth(@Coerce Object self, double original) {
         this.boundNorth = -ProtoSlim.BORDER_WIDTH / 2;
     }
 
-    @Redirect(method = "recalculateBounds", at = @At(value = "FIELD", target = "Lnet/minecraft/world/border/WorldBorder$StaticArea;boundWest:D"))
+    @Redirect(method = "Lnet/minecraft/world/border/WorldBorder$StaticArea;recalculateBounds()V", at = @At(value = "FIELD", target = "Lnet/minecraft/world/border/WorldBorder$StaticArea;boundWest:D"))
     private void setBoundWest(@Coerce Object self, double original) {
         this.boundWest = -ProtoSlim.BORDER_LENGTH / 2;
     }
 
-    @Redirect(method = "recalculateBounds", at = @At(value = "FIELD", target = "Lnet/minecraft/world/border/WorldBorder$StaticArea;boundSouth:D"))
+    @Redirect(method = "Lnet/minecraft/world/border/WorldBorder$StaticArea;recalculateBounds()V", at = @At(value = "FIELD", target = "Lnet/minecraft/world/border/WorldBorder$StaticArea;boundSouth:D"))
     private void setBoundSouth(@Coerce Object self, double original) {
         this.boundSouth = ProtoSlim.BORDER_WIDTH / 2;
     }
