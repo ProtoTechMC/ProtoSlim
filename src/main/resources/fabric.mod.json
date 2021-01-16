@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "protoslim",
+  "version": "${version}",
+
+  "name": "ProtoSlim",
+  "description": "Server-Side mod for the ProtoSlim Minecraft server. Changes world border dimensions, back-ports shulker spawning and adds elytra recipe.",
+  "authors": [
+    "CheaterCodes"
+  ],
+  "contact": {
+    "sources": "https://github.com/ProtoTechMC/ProtoSlim"
+  },
+
+  "license": "MIT",
+  "icon": "assets/protoslim/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.prototechmc.protoslim.ProtoSlim"
+    ]
+  },
+  "mixins": [
+    "protoslim.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.0",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  }
+}
