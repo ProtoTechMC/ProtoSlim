@@ -16,11 +16,6 @@
   "icon": "assets/protoslim/icon.png",
 
   "environment": "*",
-  "entrypoints": {
-    "main": [
-      "io.github.prototechmc.protoslim.ProtoSlim"
-    ]
-  },
   "mixins": [
     "protoslim.mixins.json"
   ],

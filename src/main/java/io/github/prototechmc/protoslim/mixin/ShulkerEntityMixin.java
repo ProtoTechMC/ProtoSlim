@@ -1,5 +1,6 @@
 package io.github.prototechmc.protoslim.mixin;
 
+import io.github.prototechmc.protoslim.ProtoSlim;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.damage.DamageSource;
@@ -45,7 +46,7 @@ public abstract class ShulkerEntityMixin extends GolemEntity implements Monster 
 
     @Inject(method = "damage", slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/entity/mob/ShulkerEntity;tryTeleport()Z")), at = @At(value = "RETURN", ordinal = 0))
     private void afterTryTeleport(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
-        if (!didTryTeleport && source.isProjectile()) {
+        if (ProtoSlim.enabled && !didTryTeleport && source.isProjectile()) {
             Entity projectile = source.getSource();
             if (projectile != null && projectile.getType() == EntityType.SHULKER_BULLET) {
                 this.spawnNewShulker();
