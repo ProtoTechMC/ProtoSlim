@@ -39,6 +39,9 @@ public abstract class ServerPlayerEntityMixin extends PlayerEntity implements IS
 
     @Override
     public void sendWorldBorderPacket() {
+        if (!ProtoSlim.enabled) {
+            return;
+        }
         wasPositive = getZ() > 0;
         WorldBorder border = new WorldBorder();
         border.setSize(ProtoSlim.BORDER_LENGTH);
