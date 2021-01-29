@@ -11,4 +11,4 @@ Back port of the 1.17+ feature.
 A shulker hit by a shulker bullet has a chance to spawn another shulker.
 
 ## Elytra recipe
-Elytras can be crafted with an end rod, a nether start and 4 shulker membranes.
+Elytras can be crafted with an end rod, a nether start and 4 phantom membranes.
